@@ -11,6 +11,7 @@ struct BookSearchView: View {
 	
 	@State private var searchQuery: String = ""
 	@State private var errorMessage: String = ""
+	@State private var books = [Book]()
 	
 	var body: some View {
 		
@@ -79,5 +80,25 @@ struct BookSearchView_Previews: PreviewProvider {
 extension BookSearchView {
 	func searchBook() {
 		print("searching")
+		
+		let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=\(searchQuery)")!
+		
+		URLSession.shared.dataTask(with: url) { data, response, error in
+			guard let data = data else {
+				return
+			}
+			do {
+				let decoder = JSONDecoder()
+				let searchResponse = try decoder.decode(BookSearchResponse.self, from: data)
+				if searchResponse.items.count > 0 {
+					self.books = searchResponse.items
+				}
+			} catch {
+				print("request failed \(error)")
+			}
+			
+		}.resume()
+		
+		
 	}
 }
