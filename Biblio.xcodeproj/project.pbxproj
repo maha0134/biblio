@@ -11,6 +11,7 @@
 		4AA5A0EF29E1DACA00E2AB2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA5A0EE29E1DACA00E2AB2E /* ContentView.swift */; };
 		4AA5A0F129E1DACB00E2AB2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA5A0F029E1DACB00E2AB2E /* Assets.xcassets */; };
 		4AA5A0F429E1DACB00E2AB2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA5A0F329E1DACB00E2AB2E /* Preview Assets.xcassets */; };
+		4AA7CD1629E1E7A6007E2126 /* BookSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD1529E1E7A6007E2126 /* BookSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4AA5A0EE29E1DACA00E2AB2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4AA5A0F029E1DACB00E2AB2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AA5A0F329E1DACB00E2AB2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4AA7CD1529E1E7A6007E2126 /* BookSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				4AA5A0EC29E1DACA00E2AB2E /* BiblioApp.swift */,
 				4AA5A0EE29E1DACA00E2AB2E /* ContentView.swift */,
+				4AA7CD1529E1E7A6007E2126 /* BookSearchView.swift */,
 				4AA5A0F029E1DACB00E2AB2E /* Assets.xcassets */,
 				4AA5A0F229E1DACB00E2AB2E /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA7CD1629E1E7A6007E2126 /* BookSearchView.swift in Sources */,
 				4AA5A0EF29E1DACA00E2AB2E /* ContentView.swift in Sources */,
 				4AA5A0ED29E1DACA00E2AB2E /* BiblioApp.swift in Sources */,
 			);
