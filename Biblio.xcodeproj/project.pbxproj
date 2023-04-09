@@ -13,6 +13,8 @@
 		4AA5A0F429E1DACB00E2AB2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA5A0F329E1DACB00E2AB2E /* Preview Assets.xcassets */; };
 		4AA7CD1629E1E7A6007E2126 /* BookSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD1529E1E7A6007E2126 /* BookSearchView.swift */; };
 		4AA7CD1B29E204CE007E2126 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD1A29E204CE007E2126 /* SearchResponse.swift */; };
+		4AA7CD1F29E22FC7007E2126 /* BooksDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD1E29E22FC7007E2126 /* BooksDisplayView.swift */; };
+		4AA7CD2129E237FD007E2126 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD2029E237FD007E2126 /* BookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		4AA5A0F329E1DACB00E2AB2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4AA7CD1529E1E7A6007E2126 /* BookSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchView.swift; sourceTree = "<group>"; };
 		4AA7CD1A29E204CE007E2126 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		4AA7CD1E29E22FC7007E2126 /* BooksDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksDisplayView.swift; sourceTree = "<group>"; };
+		4AA7CD2029E237FD007E2126 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				4AA7CD1529E1E7A6007E2126 /* BookSearchView.swift */,
+				4AA7CD1E29E22FC7007E2126 /* BooksDisplayView.swift */,
+				4AA7CD2029E237FD007E2126 /* BookView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -160,7 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AA7CD1B29E204CE007E2126 /* SearchResponse.swift in Sources */,
+				4AA7CD1F29E22FC7007E2126 /* BooksDisplayView.swift in Sources */,
 				4AA7CD1629E1E7A6007E2126 /* BookSearchView.swift in Sources */,
+				4AA7CD2129E237FD007E2126 /* BookView.swift in Sources */,
 				4AA5A0EF29E1DACA00E2AB2E /* ContentView.swift in Sources */,
 				4AA5A0ED29E1DACA00E2AB2E /* BiblioApp.swift in Sources */,
 			);
