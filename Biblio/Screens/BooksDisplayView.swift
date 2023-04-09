@@ -21,6 +21,7 @@ struct BooksDisplayView: View {
 			}
 			ForEach(books) { book in
 				BookView(book: book)
+				Divider()
 			}
 		}
     }
