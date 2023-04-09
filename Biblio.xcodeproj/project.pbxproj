@@ -15,6 +15,7 @@
 		4AA7CD1B29E204CE007E2126 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD1A29E204CE007E2126 /* SearchResponse.swift */; };
 		4AA7CD1F29E22FC7007E2126 /* BooksDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD1E29E22FC7007E2126 /* BooksDisplayView.swift */; };
 		4AA7CD2129E237FD007E2126 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD2029E237FD007E2126 /* BookView.swift */; };
+		4AA9289929E37408001BA9BC /* BookSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9289829E37408001BA9BC /* BookSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		4AA7CD1A29E204CE007E2126 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		4AA7CD1E29E22FC7007E2126 /* BooksDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksDisplayView.swift; sourceTree = "<group>"; };
 		4AA7CD2029E237FD007E2126 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		4AA9289629E3650B001BA9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4AA9289829E37408001BA9BC /* BookSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 		4AA5A0EB29E1DACA00E2AB2E /* Biblio */ = {
 			isa = PBXGroup;
 			children = (
+				4AA9289629E3650B001BA9BC /* Info.plist */,
 				4AA7CD1929E204AA007E2126 /* Models */,
 				4AA7CD1729E20488007E2126 /* Screens */,
 				4AA5A0EC29E1DACA00E2AB2E /* BiblioApp.swift */,
@@ -80,7 +84,7 @@
 		4AA7CD1729E20488007E2126 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				4AA7CD1529E1E7A6007E2126 /* BookSearchView.swift */,
+				4AA9289729E373EB001BA9BC /* Book Search View */,
 				4AA7CD1E29E22FC7007E2126 /* BooksDisplayView.swift */,
 				4AA7CD2029E237FD007E2126 /* BookView.swift */,
 			);
@@ -93,6 +97,15 @@
 				4AA7CD1A29E204CE007E2126 /* SearchResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4AA9289729E373EB001BA9BC /* Book Search View */ = {
+			isa = PBXGroup;
+			children = (
+				4AA7CD1529E1E7A6007E2126 /* BookSearchView.swift */,
+				4AA9289829E37408001BA9BC /* BookSearchViewModel.swift */,
+			);
+			path = "Book Search View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +184,7 @@
 				4AA7CD2129E237FD007E2126 /* BookView.swift in Sources */,
 				4AA5A0EF29E1DACA00E2AB2E /* ContentView.swift in Sources */,
 				4AA5A0ED29E1DACA00E2AB2E /* BiblioApp.swift in Sources */,
+				4AA9289929E37408001BA9BC /* BookSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +316,7 @@
 				DEVELOPMENT_TEAM = V94L67MHG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Biblio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -331,6 +346,7 @@
 				DEVELOPMENT_TEAM = V94L67MHG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Biblio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -19,6 +19,7 @@ struct BooksDisplayView: View {
 				Text("\(search)")
 					.fontWeight(.bold)
 			}
+			
 			ForEach(books) { book in
 				BookView(book: book)
 				Divider()

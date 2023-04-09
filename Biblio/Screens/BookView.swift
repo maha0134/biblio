@@ -19,10 +19,11 @@ struct BookView: View {
 				.frame(width: 130)
 			VStack(alignment: .leading) {
 				Text(book.volumeInfo?.title ?? "N/A")
-				Text(book.volumeInfo?.subtitle ?? "")
 				Text("Rating: \(rating)")
 			}
-		}.padding()
+			.frame(width: 200, alignment: .leading)
+		}
+		.padding()
     }
 }
 
