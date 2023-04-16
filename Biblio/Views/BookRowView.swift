@@ -9,19 +9,24 @@ import SwiftUI
 
 struct BookRowView: View {
 	var book: Book
+	private var imageUrl: String { book.volumeInfo?.imageLinks?.smallThumbnail ?? "" }
+	private var title: String { book.volumeInfo?.title ?? "" }
+	
 	var rating: String {
 		return String(format:"%.1f", book.volumeInfo?.averageRating ?? 0.00)
 	}
     var body: some View {
 		HStack(spacing: 20) {
-			AsyncImage(url: URL(string: book.volumeInfo?.imageLinks?.smallThumbnail ?? ""))
+			AsyncImage(url: URL(string: imageUrl))
 				.scaledToFit()
 				.frame(width: 130)
+			
 			VStack(alignment: .leading) {
-				Text(book.volumeInfo?.title ?? "N/A")
-				Text("Rating: \(rating)")
+				Text(title)
+				RatingStarsView(book: book)
 			}
 			.frame(width: 200, alignment: .leading)
+			.font(.callout)
 		}
 		.padding()
     }

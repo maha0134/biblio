@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct BookView: View {
+	
 	var book: Book
+	@State private var expanded: Bool = false
 	private var title: String { book.volumeInfo?.title ?? ""}
 	private var authors: [String] { book.volumeInfo?.authors ?? []}
-	private var rating: Float? { book.volumeInfo?.averageRating }
-	private var fullStars:Int { Int(rating ?? 0) }
-	private var halfStars: Bool { String(rating ?? 0).split(separator: ".")[1] == "0" ? false : true }
 	private var description: String { book.volumeInfo?.description ?? ""}
+	private var thumbnail: String { book.volumeInfo?.imageLinks?.thumbnail ?? "" }
 	
 	var body: some View {
 		
 		ScrollView {
 			VStack(spacing: 5) {
-				AsyncImage(url: URL(string: book.volumeInfo?.imageLinks?.thumbnail ?? ""))
+				AsyncImage(url: URL(string: thumbnail))
 				
 				Text(title)
 					.font(.title)
@@ -29,7 +29,7 @@ struct BookView: View {
 				HStack{
 					Text("Author(s):")
 						.fontWeight(.bold)
-					VStack {
+					VStack(alignment: .leading) {
 						ForEach(authors, id: \.self) {author in
 							Text(author)
 						}
@@ -39,7 +39,7 @@ struct BookView: View {
 				HStack{
 					Text("Rating: ")
 						.fontWeight(.bold)
-					RatingStarsView(fullStars: fullStars, halfStars: halfStars)
+					RatingStarsView(book: book)
 				}
 				
 				VStack(alignment: .leading) {
@@ -49,6 +49,16 @@ struct BookView: View {
 						.padding(.bottom, 5)
 					
 					Text(description)
+						.lineLimit(expanded ? nil : 5)
+					
+					Button(action: {
+						expanded.toggle()
+					}, label: {
+						Text(expanded ? "...read less" : "...read more")
+					})
+						.foregroundColor(.accentColor)
+						.frame(maxWidth: .infinity, alignment: .trailing)
+						
 				}.padding()
 			}
 		}

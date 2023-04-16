@@ -37,27 +37,20 @@ struct BookSearchView: View {
 						
 						TextField("Enter book name", text: $vm.searchQuery)
 							.padding(7)
-							.cornerRadius(5)
 							.border(vm.errorMessage.isEmpty ? .black : .red)
 							.padding([.leading, .trailing], 20)
 							.padding(.bottom, 10)
 							.font(.body)
-							.onChange(of: vm.searchQuery) { newValue in
-								if !newValue.isEmpty {
+							.onChange(of: vm.searchQuery) { newSearchQuery in
+								if !newSearchQuery.isEmpty {
 									vm.errorMessage = ""
 								}
 							}
 							.focused($focused)
+							.keyboardType(.webSearch)
 						
 						Button {
-							if vm.searchQuery.isEmpty {
-								vm.errorMessage = "Please enter something to search"
-							} else {
-								focused = false
-								vm.isLoading = true
-								searchBook()
-							}
-							
+							searchRequested()
 						} label: {
 							Text("Search")
 								.foregroundColor(.white)
@@ -67,6 +60,9 @@ struct BookSearchView: View {
 						.padding([.leading, .trailing], 15)
 						.background(Color.brown)
 						.cornerRadius(10)
+					}
+					.onSubmit {
+						searchRequested()
 					}
 				}
 				.navigationDestination(isPresented: $vm.showBookDisplayView) {
@@ -118,5 +114,15 @@ extension BookSearchView {
 				print("request failed \(error)")
 			}
 		}.resume()
+	}
+	
+	func searchRequested(){
+		if vm.searchQuery.isEmpty {
+			vm.errorMessage = "Please enter something to search"
+		} else {
+			focused = false
+			vm.isLoading = true
+			searchBook()
+		}
 	}
 }
