@@ -24,7 +24,6 @@ struct RatingStarsView: View {
 				}
 			}
 		}
-		.font(.title3)
 		.foregroundColor(.brown)
     }
 }
