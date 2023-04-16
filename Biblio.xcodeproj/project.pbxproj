@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A5EA81D29EC4C1C00724DBA /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA81C29EC4C1C00724DBA /* BookView.swift */; };
+		4A5EA82029EC5BB700724DBA /* RatingStarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA81F29EC5BB700724DBA /* RatingStarsView.swift */; };
 		4AA5A0ED29E1DACA00E2AB2E /* BiblioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA5A0EC29E1DACA00E2AB2E /* BiblioApp.swift */; };
-		4AA5A0EF29E1DACA00E2AB2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA5A0EE29E1DACA00E2AB2E /* ContentView.swift */; };
 		4AA5A0F129E1DACB00E2AB2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA5A0F029E1DACB00E2AB2E /* Assets.xcassets */; };
 		4AA5A0F429E1DACB00E2AB2E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA5A0F329E1DACB00E2AB2E /* Preview Assets.xcassets */; };
 		4AA7CD1629E1E7A6007E2126 /* BookSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD1529E1E7A6007E2126 /* BookSearchView.swift */; };
 		4AA7CD1B29E204CE007E2126 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD1A29E204CE007E2126 /* SearchResponse.swift */; };
 		4AA7CD1F29E22FC7007E2126 /* BooksDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD1E29E22FC7007E2126 /* BooksDisplayView.swift */; };
-		4AA7CD2129E237FD007E2126 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD2029E237FD007E2126 /* BookView.swift */; };
+		4AA7CD2129E237FD007E2126 /* BookRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD2029E237FD007E2126 /* BookRowView.swift */; };
 		4AA9289929E37408001BA9BC /* BookSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9289829E37408001BA9BC /* BookSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A5EA81C29EC4C1C00724DBA /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		4A5EA81F29EC5BB700724DBA /* RatingStarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingStarsView.swift; sourceTree = "<group>"; };
 		4AA5A0E929E1DACA00E2AB2E /* Biblio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biblio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA5A0EC29E1DACA00E2AB2E /* BiblioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiblioApp.swift; sourceTree = "<group>"; };
-		4AA5A0EE29E1DACA00E2AB2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4AA5A0F029E1DACB00E2AB2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AA5A0F329E1DACB00E2AB2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4AA7CD1529E1E7A6007E2126 /* BookSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchView.swift; sourceTree = "<group>"; };
 		4AA7CD1A29E204CE007E2126 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		4AA7CD1E29E22FC7007E2126 /* BooksDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksDisplayView.swift; sourceTree = "<group>"; };
-		4AA7CD2029E237FD007E2126 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		4AA7CD2029E237FD007E2126 /* BookRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRowView.swift; sourceTree = "<group>"; };
 		4AA9289629E3650B001BA9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4AA9289829E37408001BA9BC /* BookSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A5EA81E29EC4C4C00724DBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AA7CD2029E237FD007E2126 /* BookRowView.swift */,
+				4A5EA81F29EC5BB700724DBA /* RatingStarsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4AA5A0E029E1DACA00E2AB2E = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +73,11 @@
 		4AA5A0EB29E1DACA00E2AB2E /* Biblio */ = {
 			isa = PBXGroup;
 			children = (
+				4A5EA81E29EC4C4C00724DBA /* Views */,
 				4AA9289629E3650B001BA9BC /* Info.plist */,
 				4AA7CD1929E204AA007E2126 /* Models */,
 				4AA7CD1729E20488007E2126 /* Screens */,
 				4AA5A0EC29E1DACA00E2AB2E /* BiblioApp.swift */,
-				4AA5A0EE29E1DACA00E2AB2E /* ContentView.swift */,
 				4AA5A0F029E1DACB00E2AB2E /* Assets.xcassets */,
 				4AA5A0F229E1DACB00E2AB2E /* Preview Content */,
 			);
@@ -86,7 +97,7 @@
 			children = (
 				4AA9289729E373EB001BA9BC /* Book Search View */,
 				4AA7CD1E29E22FC7007E2126 /* BooksDisplayView.swift */,
-				4AA7CD2029E237FD007E2126 /* BookView.swift */,
+				4A5EA81C29EC4C1C00724DBA /* BookView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -180,10 +191,11 @@
 			files = (
 				4AA7CD1B29E204CE007E2126 /* SearchResponse.swift in Sources */,
 				4AA7CD1F29E22FC7007E2126 /* BooksDisplayView.swift in Sources */,
+				4A5EA82029EC5BB700724DBA /* RatingStarsView.swift in Sources */,
 				4AA7CD1629E1E7A6007E2126 /* BookSearchView.swift in Sources */,
-				4AA7CD2129E237FD007E2126 /* BookView.swift in Sources */,
-				4AA5A0EF29E1DACA00E2AB2E /* ContentView.swift in Sources */,
+				4AA7CD2129E237FD007E2126 /* BookRowView.swift in Sources */,
 				4AA5A0ED29E1DACA00E2AB2E /* BiblioApp.swift in Sources */,
+				4A5EA81D29EC4C1C00724DBA /* BookView.swift in Sources */,
 				4AA9289929E37408001BA9BC /* BookSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,33 +2,36 @@
 //  BookView.swift
 //  Biblio
 //
-//  Created by AKSHAY MAHAJAN on 2023-04-08.
+//  Created by AKSHAY MAHAJAN on 2023-04-16.
 //
 
 import SwiftUI
 
 struct BookView: View {
 	var book: Book
-	var rating: String {
-		return String(format:"%.1f", book.volumeInfo?.averageRating ?? 0.00)
-	}
-    var body: some View {
-		HStack(spacing: 20) {
-			AsyncImage(url: URL(string: book.volumeInfo?.imageLinks?.smallThumbnail ?? ""))
-				.scaledToFit()
-				.frame(width: 130)
-			VStack(alignment: .leading) {
-				Text(book.volumeInfo?.title ?? "N/A")
-				Text("Rating: \(rating)")
+	private var title: String { book.volumeInfo?.title ?? ""}
+	private var rating: Float? { book.volumeInfo?.averageRating }
+	private var fullStars:Int { Int(rating ?? 0) }
+	private var halfStars: Bool { String(rating ?? 0).split(separator: ".")[1] == "0" ? false : true}
+	
+	var body: some View {
+		ScrollView {
+			AsyncImage(url: URL(string: book.volumeInfo?.imageLinks?.thumbnail ?? ""))
+			
+			Text(title)
+				.font(.title)
+			HStack{
+				Text("Rating: ")
+					.font(.title3)
+				RatingStarsView(fullStars: fullStars, halfStars: halfStars)
 			}
-			.frame(width: 200, alignment: .leading)
 		}
-		.padding()
-    }
+		
+	}
 }
 
 struct BookView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		BookView(book: SampleBook().sampleBook)
-    }
+	}
 }

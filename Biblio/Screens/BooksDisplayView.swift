@@ -14,6 +14,7 @@ struct BooksDisplayView: View {
 	var body: some View {
         
 		ScrollView {
+			
 			HStack(spacing: 0) {
 				Text("We found \(books.count) books for ")
 				Text("\(search)")
@@ -21,7 +22,11 @@ struct BooksDisplayView: View {
 			}
 			
 			ForEach(books) { book in
-				BookView(book: book)
+				NavigationLink {
+					BookView(book: book)
+				} label: {
+					BookRowView(book: book)
+				}
 				Divider()
 			}
 		}

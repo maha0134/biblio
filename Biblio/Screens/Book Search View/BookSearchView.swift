@@ -53,6 +53,7 @@ struct BookSearchView: View {
 							if vm.searchQuery.isEmpty {
 								vm.errorMessage = "Please enter something to search"
 							} else {
+								focused = false
 								vm.isLoading = true
 								searchBook()
 							}
