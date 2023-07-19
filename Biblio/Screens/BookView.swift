@@ -15,6 +15,9 @@ struct BookView: View {
 	private var authors: [String] { book.volumeInfo?.authors ?? []}
 	private var description: String { book.volumeInfo?.description ?? ""}
 	private var thumbnail: String { book.volumeInfo?.imageLinks?.thumbnail ?? "" }
+	private var pageCount: Int { book.volumeInfo?.pageCount ?? 0 }
+	private var country: String { book.saleInfo?.country ?? "" }
+	private var isEbook: Bool { book.saleInfo?.isEbook ?? false }
 	
 	var body: some View {
 		
@@ -25,9 +28,9 @@ struct BookView: View {
 				Text(title)
 					.font(.title)
 					.fontWeight(.bold)
-				
+				Divider()
 				HStack{
-					Text("Author(s):")
+					Text(authors.count > 1 ? "Authors:" : "Author:")
 						.fontWeight(.bold)
 					VStack(alignment: .leading) {
 						ForEach(authors, id: \.self) {author in
@@ -42,7 +45,9 @@ struct BookView: View {
 					RatingStarsView(book: book)
 				}
 				
-				VStack(alignment: .leading) {
+				Divider()
+				
+				VStack(alignment: .leading, spacing: 5) {
 					Text("Description:")
 						.font(.title2)
 						.fontWeight(.bold)
@@ -56,10 +61,23 @@ struct BookView: View {
 					}, label: {
 						Text(expanded ? "...read less" : "...read more")
 					})
-						.foregroundColor(.accentColor)
-						.frame(maxWidth: .infinity, alignment: .trailing)
-						
+					.frame(maxWidth: .infinity, alignment: .trailing)
+					
 				}.padding()
+				
+				HStack {
+					Text("\(pageCount) pages")
+						if isEbook {
+							if let link = book.saleInfo?.buyLink{
+								Link("Buy ebook", destination: URL(string: link)!)
+							} else {
+								Text(" - ebook available")
+							}
+						} else {
+							Text("ebook not available")
+						}
+				}
+				Text("Country - \(country)")
 			}
 		}
 		.padding()
