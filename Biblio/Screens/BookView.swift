@@ -22,13 +22,23 @@ struct BookView: View {
 	var body: some View {
 		
 		ScrollView {
-			VStack(spacing: 5) {
-				AsyncImage(url: URL(string: thumbnail))
+			VStack(spacing: 10) {
+				AsyncImage(url: URL(string: thumbnail)) { image in
+					image.resizable()
+				} placeholder: {
+					ProgressView()
+				}
+				.frame(width: 175)
+				.shadow(radius: 5)
+				.padding()
+
 				
 				Text(title)
 					.font(.title)
 					.fontWeight(.bold)
+				
 				Divider()
+				
 				HStack{
 					Text(authors.count > 1 ? "Authors:" : "Author:")
 						.fontWeight(.bold)
@@ -39,11 +49,13 @@ struct BookView: View {
 					}
 				}
 				
-				HStack{
+				HStack {
 					Text("Rating: ")
 						.fontWeight(.bold)
 					RatingStarsView(book: book)
+						.font(.title3)
 				}
+				.frame(maxWidth: .infinity)
 				
 				Divider()
 				
@@ -63,12 +75,13 @@ struct BookView: View {
 					})
 					.frame(maxWidth: .infinity, alignment: .trailing)
 					
-				}.padding()
+				}
+				.padding()
 				
 				HStack {
 					Text("\(pageCount) pages")
 						if isEbook {
-							if let link = book.saleInfo?.buyLink{
+							if let link = book.saleInfo?.buyLink {
 								Link("Buy ebook", destination: URL(string: link)!)
 							} else {
 								Text(" - ebook available")
@@ -80,7 +93,6 @@ struct BookView: View {
 				Text("Country - \(country)")
 			}
 		}
-		.padding()
 		.font(.title3)
 	}
 }

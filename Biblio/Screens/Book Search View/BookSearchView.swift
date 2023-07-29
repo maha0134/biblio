@@ -116,7 +116,7 @@ extension BookSearchView {
 		}.resume()
 	}
 	
-	func searchRequested(){
+	func searchRequested() {
 		if vm.searchQuery.isEmpty {
 			vm.errorMessage = "Please enter something to search"
 		} else {

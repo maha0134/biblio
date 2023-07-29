@@ -16,7 +16,7 @@ struct BooksDisplayView: View {
 		ScrollView {
 			
 			HStack(spacing: 0) {
-				Text("We found \(books.count) books for ")
+				Text("Showing top \(books.count) books for ")
 				Text("\(search)")
 					.fontWeight(.bold)
 			}

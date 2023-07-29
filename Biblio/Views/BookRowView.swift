@@ -17,9 +17,14 @@ struct BookRowView: View {
 	}
     var body: some View {
 		HStack(spacing: 20) {
-			AsyncImage(url: URL(string: imageUrl))
-				.scaledToFit()
-				.frame(width: 130)
+			
+			AsyncImage(url: URL(string: imageUrl)) { image in
+				image.resizable()
+					.scaledToFit()
+			} placeholder: {
+				ProgressView()
+			}
+			.frame(width: 130)
 			
 			VStack(alignment: .leading) {
 				Text(title)
