@@ -17,6 +17,7 @@
 		4AA7CD1F29E22FC7007E2126 /* BooksDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD1E29E22FC7007E2126 /* BooksDisplayView.swift */; };
 		4AA7CD2129E237FD007E2126 /* BookRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7CD2029E237FD007E2126 /* BookRowView.swift */; };
 		4AA9289929E37408001BA9BC /* BookSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9289829E37408001BA9BC /* BookSearchViewModel.swift */; };
+		4ACDA6B62A756F7C004DAFE4 /* NoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDA6B52A756F7C004DAFE4 /* NoPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4AA7CD2029E237FD007E2126 /* BookRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRowView.swift; sourceTree = "<group>"; };
 		4AA9289629E3650B001BA9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4AA9289829E37408001BA9BC /* BookSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewModel.swift; sourceTree = "<group>"; };
+		4ACDA6B52A756F7C004DAFE4 /* NoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			children = (
 				4AA7CD2029E237FD007E2126 /* BookRowView.swift */,
 				4A5EA81F29EC5BB700724DBA /* RatingStarsView.swift */,
+				4ACDA6B52A756F7C004DAFE4 /* NoPreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AA7CD1B29E204CE007E2126 /* SearchResponse.swift in Sources */,
+				4ACDA6B62A756F7C004DAFE4 /* NoPreviewView.swift in Sources */,
 				4AA7CD1F29E22FC7007E2126 /* BooksDisplayView.swift in Sources */,
 				4A5EA82029EC5BB700724DBA /* RatingStarsView.swift in Sources */,
 				4AA7CD1629E1E7A6007E2126 /* BookSearchView.swift in Sources */,

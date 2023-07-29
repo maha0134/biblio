@@ -29,6 +29,7 @@ struct BooksDisplayView: View {
 				}
 				Divider()
 			}
+			.navigationTitle("Search")
 		}
     }
 }

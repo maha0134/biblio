@@ -41,6 +41,8 @@ struct BookSearchView: View {
 							.padding([.leading, .trailing], 20)
 							.padding(.bottom, 10)
 							.font(.body)
+							.autocorrectionDisabled()
+							.textInputAutocapitalization(.never)
 							.onChange(of: vm.searchQuery) { newSearchQuery in
 								if !newSearchQuery.isEmpty {
 									vm.errorMessage = ""
@@ -74,6 +76,9 @@ struct BookSearchView: View {
 					}
 					.frame(maxWidth: .infinity, maxHeight: .infinity)
 					.background(Color.gray)
+					.font(.title2)
+					.foregroundColor(.black)
+					.tint(.white)
 				}
 			}
 			.onTapGesture {
